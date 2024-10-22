@@ -1,0 +1,112 @@
+/* Root variables for color scheme */
+:root {
+  --primary-color: #8e3e63; /* Dark Pinkish */
+  --secondary-color: #d2649a; /* Light Pink */
+  --tertiary-color: #f6fab9; /* Soft Yellow */
+  --accent-color: #cae6b2; /* Pale Green */
+  --input-border-color: #cae6b2; /* Input border */
+  --input-focus-border: #8e3e63; /* Input focus border */
+  --input-bg-color: #f6fab9; /* Input background */
+  --btn-bg-color: #d2649a; /* Button background */
+  --btn-hover-bg: #8e3e63; /* Button hover background */
+  --btn-color: #f6fab9; /* Button text color */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.form-container .form-group {
+  margin-bottom: 15px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--input-bg-color);
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.form-container .form-group input:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+.form-container p {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--primary-color);
+}
+
+.form-container p button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-container p button:hover {
+  color: var(--accent-color);
+}
